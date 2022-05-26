@@ -1,0 +1,120 @@
+@import "_normalize";
+.container {
+  width: 1140px;
+  margin: auto;
+}
+.video-slide {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  &__owl-carousel  {
+
+  }
+  &__owl-item {
+    position: relative;
+    display: flex;
+    margin: auto;
+    height: 550px;
+    width: 555px;
+    transition: height 0.3s;
+  }
+  &__item-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__item-link:hover {
+    .video-slide__item-icon {
+      color: #369ce0;
+    }
+  }
+  &__item-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  &__item-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    transition: color .5s;
+  }
+  &__item-title {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Bellota Text', cursive;
+    text-transform: uppercase;
+  }
+}
+.owl-nav {
+  position: absolute;
+  top: 73%;
+  right: calc((100% / 2) - 560px);
+
+}
+.owl-prev i, .owl-next i{
+  color: #369ce0;
+  font-size: 32px;
+}
+.owl-next.disabled , .owl-prev.disabled {
+  opacity: 0.5;
+}
+.owl-next i{
+  margin-left: 10px;
+}
+
+.owl-dots {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  top: 75%;
+  left: calc((100% / 2) + 10px);
+}
+.owl-dot {
+  margin: 0 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: relative;
+  outline: none;
+}
+.owl-dot.active {
+  width: 20px;
+  border-radius: 8px;
+}
+.owl-dot.active:before {
+  border-radius: 10px;
+}
+.owl-dot:before {
+  content: '';
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  position: absolute;
+  border: 1px solid #369ce0;
+  border-radius: 50%;
+}
+.owl-item.active + .owl-item.active {
+  .video-slide__owl-item {
+    height: 385px;
+  }
+}
+
+
